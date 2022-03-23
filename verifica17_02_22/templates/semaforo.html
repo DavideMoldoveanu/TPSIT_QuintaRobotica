@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Tempo VERDE" name="timeV" value="{{
+          request.form.timeV }}">
+        <input type="text" placeholder="Tempo ROSSO" name="timeR" value="{{
+        request.form.timeR }}">
+        <input type="text" placeholder="Tempo GIALLO" name="timeG" value="{{
+            request.form.timeG }}">
+
+        <input type="text" placeholder="STATO" name="stato" value="{{
+            request.form.stato }}">
+        
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
